@@ -1,9 +1,9 @@
 import {
+  type DeviceStatus,
   type EvenAppBridge,
   RebuildPageContainer,
   TextContainerProperty,
   TextContainerUpgrade,
-  type DeviceStatus,
 } from '@evenrealities/even_hub_sdk'
 import type { PageResult } from '../navigator'
 

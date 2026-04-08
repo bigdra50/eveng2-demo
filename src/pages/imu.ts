@@ -1,10 +1,10 @@
 import {
   type EvenAppBridge,
+  ImuReportPace,
+  OsEventTypeList,
   RebuildPageContainer,
   TextContainerProperty,
   TextContainerUpgrade,
-  OsEventTypeList,
-  ImuReportPace,
 } from '@evenrealities/even_hub_sdk'
 import type { PageResult } from '../navigator'
 import { isClickEvent } from '../utils/events'

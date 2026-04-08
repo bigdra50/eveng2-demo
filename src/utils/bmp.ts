@@ -4,11 +4,7 @@
  * G2のupdateImageRawDataはBMPファイルバイナリを期待する。
  * 参考: EvenChess (github.com/dmyster145/EvenChess) の実装パターン
  */
-export function encode1bitBmp(
-  width: number,
-  height: number,
-  pixels: Uint8Array,
-): Uint8Array {
+export function encode1bitBmp(width: number, height: number, pixels: Uint8Array): Uint8Array {
   const rowBytes = Math.ceil(width / 8)
   const stride = (rowBytes + 3) & ~3 // 4byte alignment
   const pixelDataSize = stride * height
@@ -39,9 +35,15 @@ export function encode1bitBmp(
 
   // --- Color Table (8 bytes) ---
   // Color 0 = black (0,0,0,0)
-  buf[54] = 0; buf[55] = 0; buf[56] = 0; buf[57] = 0
+  buf[54] = 0
+  buf[55] = 0
+  buf[56] = 0
+  buf[57] = 0
   // Color 1 = white (255,255,255,0)
-  buf[58] = 255; buf[59] = 255; buf[60] = 255; buf[61] = 0
+  buf[58] = 255
+  buf[59] = 255
+  buf[60] = 255
+  buf[61] = 0
 
   // --- Pixel Data (bottom-up) ---
   for (let row = 0; row < height; row++) {

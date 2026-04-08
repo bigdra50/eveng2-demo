@@ -1,9 +1,9 @@
 import {
   type EvenAppBridge,
+  OsEventTypeList,
   RebuildPageContainer,
   TextContainerProperty,
   TextContainerUpgrade,
-  OsEventTypeList,
 } from '@evenrealities/even_hub_sdk'
 import type { PageResult } from '../navigator'
 

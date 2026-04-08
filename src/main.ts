@@ -1,15 +1,15 @@
 import { initBridge } from './bridge'
-import { registerPage, navigateTo } from './navigator'
-import { buildMenuPage } from './pages/menu'
-import { buildDisplayPage } from './pages/display'
-import { buildListPage } from './pages/list'
-import { buildImagePage } from './pages/image'
-import { buildInputPage } from './pages/input'
+import { navigateTo, registerPage } from './navigator'
 import { buildAudioPage } from './pages/audio'
-import { buildImuPage } from './pages/imu'
-import { buildStoragePage } from './pages/storage'
 import { buildDevicePage } from './pages/device'
+import { buildDisplayPage } from './pages/display'
 import { buildGpsPage } from './pages/gps'
+import { buildImagePage } from './pages/image'
+import { buildImuPage } from './pages/imu'
+import { buildInputPage } from './pages/input'
+import { buildListPage } from './pages/list'
+import { buildMenuPage } from './pages/menu'
+import { buildStoragePage } from './pages/storage'
 
 async function main() {
   const bridge = await initBridge()

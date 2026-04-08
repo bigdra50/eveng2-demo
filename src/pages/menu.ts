@@ -1,11 +1,11 @@
 import {
-  type EvenAppBridge,
   CreateStartUpPageContainer,
+  type EvenAppBridge,
   ListContainerProperty,
   ListItemContainerProperty,
   OsEventTypeList,
 } from '@evenrealities/even_hub_sdk'
-import { type PageId, type PageResult, navigateTo } from '../navigator'
+import { navigateTo, type PageId, type PageResult } from '../navigator'
 
 const MENU_ITEMS: { label: string; page: PageId }[] = [
   { label: 'Display', page: 'display' },

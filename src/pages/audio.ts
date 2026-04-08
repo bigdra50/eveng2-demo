@@ -1,9 +1,9 @@
 import {
   type EvenAppBridge,
+  OsEventTypeList,
   RebuildPageContainer,
   TextContainerProperty,
   TextContainerUpgrade,
-  OsEventTypeList,
 } from '@evenrealities/even_hub_sdk'
 import type { PageResult } from '../navigator'
 import { timestamp } from '../utils/format'
@@ -22,7 +22,8 @@ export async function buildAudioPage(bridge: EvenAppBridge): Promise<PageResult>
     paddingLength: 8,
     containerID: 1,
     containerName: 'audio',
-    content: 'Audio (Mic) Demo\n━━━━━━━━━━━━━━━━\nMic: OFF\nFormat: PCM 16kHz mono 16bit\nTotal received: 0 bytes\n\n[Click] toggle mic\n[Double-click] back',
+    content:
+      'Audio (Mic) Demo\n━━━━━━━━━━━━━━━━\nMic: OFF\nFormat: PCM 16kHz mono 16bit\nTotal received: 0 bytes\n\n[Click] toggle mic\n[Double-click] back',
     isEventCapture: 1,
   })
 

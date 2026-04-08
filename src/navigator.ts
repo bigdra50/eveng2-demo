@@ -1,9 +1,9 @@
 import {
+  type CreateStartUpPageContainer,
   type EvenAppBridge,
-  CreateStartUpPageContainer,
-  RebuildPageContainer,
   type EvenHubEvent,
   OsEventTypeList,
+  type RebuildPageContainer,
 } from '@evenrealities/even_hub_sdk'
 
 export type PageId =
@@ -46,9 +46,7 @@ export async function navigateTo(bridge: EvenAppBridge, pageId: PageId): Promise
   currentCleanup = result.cleanup
 
   if (!initialized) {
-    await bridge.createStartUpPageContainer(
-      result.container as CreateStartUpPageContainer,
-    )
+    await bridge.createStartUpPageContainer(result.container as CreateStartUpPageContainer)
     initialized = true
   } else {
     await bridge.rebuildPageContainer(result.container as RebuildPageContainer)

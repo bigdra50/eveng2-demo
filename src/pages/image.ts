@@ -1,14 +1,14 @@
 import {
   type EvenAppBridge,
-  RebuildPageContainer,
-  TextContainerProperty,
   ImageContainerProperty,
   ImageRawDataUpdate,
+  RebuildPageContainer,
+  TextContainerProperty,
   TextContainerUpgrade,
 } from '@evenrealities/even_hub_sdk'
 import type { PageResult } from '../navigator'
-import { isClickEvent } from '../utils/events'
 import { encode1bitBmp } from '../utils/bmp'
+import { isClickEvent } from '../utils/events'
 
 const IMG_W = 200
 const IMG_H = 100
@@ -54,10 +54,7 @@ function generateBmp(gen: PatternGenerator): Uint8Array {
   return encode1bitBmp(IMG_W, IMG_H, pixels)
 }
 
-async function sendImage(
-  bridge: EvenAppBridge,
-  gen: PatternGenerator,
-): Promise<string> {
+async function sendImage(bridge: EvenAppBridge, gen: PatternGenerator): Promise<string> {
   const bmp = generateBmp(gen)
   const result = await bridge.updateImageRawData(
     new ImageRawDataUpdate({

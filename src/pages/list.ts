@@ -1,10 +1,10 @@
 import {
   type EvenAppBridge,
-  RebuildPageContainer,
-  TextContainerProperty,
   ListContainerProperty,
   ListItemContainerProperty,
   OsEventTypeList,
+  RebuildPageContainer,
+  TextContainerProperty,
   TextContainerUpgrade,
 } from '@evenrealities/even_hub_sdk'
 import type { PageResult } from '../navigator'

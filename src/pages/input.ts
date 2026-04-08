@@ -1,13 +1,13 @@
 import {
   type EvenAppBridge,
+  EventSourceType,
   RebuildPageContainer,
   TextContainerProperty,
   TextContainerUpgrade,
-  EventSourceType,
 } from '@evenrealities/even_hub_sdk'
 import type { PageResult } from '../navigator'
-import { timestamp } from '../utils/format'
 import { eventTypeName } from '../utils/events'
+import { timestamp } from '../utils/format'
 
 const SOURCE_NAMES: Record<number, string> = {
   [EventSourceType.TOUCH_EVENT_FORM_DUMMY_NULL]: 'NULL',
@@ -70,7 +70,9 @@ export async function buildInputPage(bridge: EvenAppBridge): Promise<PageResult>
       if (event.sysEvent) {
         const s = event.sysEvent
         const src = SOURCE_NAMES[s.eventSource ?? -1] ?? `src=${s.eventSource}`
-        const imu = s.imuData ? ` xyz=${s.imuData.x?.toFixed(1)},${s.imuData.y?.toFixed(1)},${s.imuData.z?.toFixed(1)}` : ''
+        const imu = s.imuData
+          ? ` xyz=${s.imuData.x?.toFixed(1)},${s.imuData.y?.toFixed(1)},${s.imuData.z?.toFixed(1)}`
+          : ''
         addLog(`${ts} SYS ${eventTypeName(s.eventType)} ${src}${imu}`)
       }
 
